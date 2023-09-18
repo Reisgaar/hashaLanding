@@ -1,27 +1,73 @@
-# App
+# Hashapon landing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+This README provides essential information for developers and collaborators.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [License](#license)
 
-## Code scaffolding
+## Introduction
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Hashapon is a web3 game and this Angular application is designed to be it's landing page.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Website includes the following features:
 
-## Running unit tests
+- **Home**: Website presentation.
+- **Pets**: Info about pet NFTs.
+- **Seasons**: Info about the seasons and tournaments.
+- **Community**: Partners and social media.
+- **Responsive Design**: The website is optimized for both desktop and mobile devices.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Prerequisites
 
-## Running end-to-end tests
+Before you can run the Hashapon Landing website locally, you need to have the following prerequisites installed:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Node.js](https://nodejs.org/) (version 16.x or higher)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+- [Angular CLI](https://angular.io/cli) (for development)
 
-## Further help
+## Installation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone this repository to your local machine:
+
+   ```
+   git clone ...
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd ...
+   ```
+
+3. Install project dependencies::
+
+   ```
+   npm install
+   ```
+
+## Usage
+
+To start the development server and view the website locally, run:
+
+  ```
+  ng serve
+  ```
+
+This command starts a development server, and you can access the website in your web browser at http://localhost:4200.
+
+## Deployment
+
+The deployment process for the Hashapon Landing may vary depending on your hosting platform. Angular applications can be deployed to various hosting services. Consult the documentation of your chosen hosting provider for deployment instructions.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
