@@ -1,0 +1,133 @@
+{
+  "species": {
+    "birds": "Aves",
+    "canids": "Cánidos",
+    "felines": "Felinos",
+    "primates": "Primates",
+    "ursids": "úrsidos"
+  },
+
+  "stats": {
+    "endurance": "Resistencia",
+    "flexibility": "Flexibilidad",
+    "speed": "Velocidad",
+    "strength": "Fuerza"
+  },
+
+  "landing": {
+
+    "navigation": {
+      "community": "Comunidad",
+      "home": "Home",
+      "marketplace": "Marketplace",
+      "partners": "Partners",
+      "pets": "Mascotas",
+      "playNow": "Juega ahora",
+      "privacy": "Política de privacidad",
+      "seasons": "Temporadas",
+      "terms": "Términos de uso",
+      "whitepaper": "Whitepaper"
+    },
+
+    "mainBlock": {
+      "claim": "Consigue, colecciona y juega con las mascotas que siempre has querido.",
+      "button1": "Más info",
+      "button2": "Juega ahora"
+    },
+
+    "worldBlock": {
+      "title": "Descubre un mundo nuevo",
+      "text": "Adquiere tus mascotas favoritas y colecciónalas todas o participa en las actividades de la comunidad para ganar $BAMBOO.",
+      "explanation": "* $BAMBOO es el token de gobernanza del juego perteneciente al ecosistema de Bamboo DeFi.",
+      "button": "Whitepaper"
+    },
+
+    "bambooBlock": {
+      "title": "¿Qué es Bamboo?",
+      "text1": "BAMBOO es el token de gobernanza (moneda del juego) perteneciente al ecosistema de Bamboo DeFi.",
+      "text2": "Lo usarás para obtener tus mascotas, jugar y participar en torneos. ¡También serás premiado en BAMBOO!",
+      "button": "Ir a Bamboo"
+    },
+
+    "petsBlock": {
+      "title": "Mascotas",
+      "text1": "¿En qué estado de crecimiento quieres a tu mascota?",
+      "text2": "Huevo, bebé, joven o adulto.",
+      "descriptions": {
+        "birds": "Veloces, observadores y muy apasionados en lo que hacen. ¿Tienes ya a tu favorito?",
+        "canids": "Los cánidos olfatean tu amor por ellos y usan su fuerza para ofrecerte la mejor protección del mundo.",
+        "felines": "Los felinos son muy independientes, capaces de ver en la oscuridad y correr grandes distancias. ¡Prrrrr!",
+        "primates": "Esta especie animal tiene una actitud enérgica y una flexibilidad de infarto. ¡Atrévete a conocerlos (si no andan holgazaneando)!",
+        "ursids": "Tranquilos, independientes y muy amorosos, estos animales te cautivarán al instante. Por cierto, ¡necesitan descansar mucho en invierno!"
+      },
+      "button": "Ver más"
+    },
+
+    "randomizationBlock": {
+      "title": "Randomización",
+      "text": "En Hashapon las mascotas son totalmente libres de ser como quieran ser. Ellas decidirán de manera aleatoria la forma de sus brazos, piernas, cuerpo o cabeza.",
+      "textBold": "¡Investiga todas las opciones posibles!",
+      "button": "Marketplace"
+    },
+
+    "statsBlock": {
+      "title": "Stats",
+      "text": "Entrena las stats de tus mascotas para obtener los mejores resultados en los torneos. ¡Ejercítalos y gana premios!",
+      "textBold": "¿Más formas de aumentar tus stats?",
+      "button": "Ver más",
+      "explanations": {
+        "endurance": "Desarrolla la resistencia de tu mascota para aguantar los desafíos más atrevidos.",
+        "flexibility": "Una mascota flexible es una mascota que se coordina mejor. ¡Mejora su agilidad con esta stat!",
+        "speed": "¿Preparados? ¿Listos? ¡Ya! Entrena la velocidad para competir y ser más ligero que tus compañeros.",
+        "strength": "¿Alguien ha dicho fuerza? Ejercita esta habilidad y destaca ganando en los torneos."
+      }
+    },
+
+    "locationsBlock": {
+      "title": "¿Dónde van a crecer tus mascotas?",
+      "incubators": {
+        "name": "Incubadora",
+        "description": "El centro de incubación da la bienvenida a todos los huevos que hayas decidido eclosionar. ¿Qué mascota esconderá?"
+      },
+      "playground": {
+        "name": "Parque",
+        "description": "Juega con sus amigos y prepáralo para ir a la escuela. Tu mascota se llenará de arena, ¡pero aprenderá a comportarse bien!"
+      },
+      "school": {
+        "name": "Escuela",
+        "description": "Aquí tu apreciado animal rebirá las mejores lecciones de la vida. ¡Tendrás que llevarlo a examen para graduarse!"
+      },
+      "gym": {
+        "name": "Gimnasio",
+        "description": "El gimnasio cuenta con una reducida cuota de inscripción para que tus mascotas mejoren su fuerza, resistencia, velocidad y flexibilidad."
+      },
+      "others": {
+        "name": "Otros Escenarios",
+        "description": "Aún te falta por descubrir el maravilloso Hashapon Paradise y otros escenarios que abriremos cuando se descubran."
+      }
+    },
+
+    "seasonsBlock": {
+      "title": "Temporadas",
+      "subtitle": "Temporada actual",
+      "description": "Conoce nuevas colecciones de mascotas o participa en torneos diferentes con cada temporada.",
+      "descriptionBold": "¡Nuevos retos te esperan!",
+      "tournaments": {
+        "title": "Torneos",
+        "text1": "Usa las stats de tus mascotas para participar en los fantásticos torneos de cada temporada.",
+        "text2": "¿Habrá entrenado lo suficiente? ¿Ganará a sus compañeros?",
+        "text3": "Consigue las posiciones más altas y recoge los mejores premios. ¡Consigue BAMBOO, tickets y otros premios!",
+        "button1": "Saber más",
+        "button2": "Jugar"
+      }
+    },
+
+    "partnersBlock": {
+      "title": "Partners"
+    },
+
+    "joinUsBlock": {
+      "title": "¡Únete!"
+    }
+  }
+}

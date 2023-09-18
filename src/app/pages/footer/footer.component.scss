@@ -1,0 +1,101 @@
+@import '/src/styleVariables.scss';
+
+.footer {
+  width: 100%;
+  background: $purple;
+  color: $white;
+
+  .menu {
+    padding: 40px 0;
+
+    .tabs {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+
+      .tab {
+        cursor: pointer;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin: 0 20px 30px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+
+    .logo {
+      width: 200px;
+      margin: 20px auto 0;
+
+      img {
+        width: 100%;
+        margin: 0 auto 0;
+      }
+    }
+  }
+}
+
+
+
+/*
+ * Responsive breakpoints
+ */
+
+// Extra large devices
+@media (max-width: 1200px) {
+}
+
+// Large devices
+@media (max-width: 992px) {
+}
+
+// Medium devices
+@media (max-width: 768px) {
+  .footer .menu {
+    padding: 40px 10px;
+
+    .logo {
+      margin: 40px auto 10px;
+    }
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      .tab {
+        margin: 0;
+        font-size: 1em;
+        line-height: 1em;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
+}
+
+// Small devices
+@media (max-width: 576px) {
+  .footer .menu {
+
+    .tabs {
+      grid-template-columns: repeat(2, 1fr);
+
+      .tab {
+        font-size: 0.9em;
+
+        &:nth-child(odd)  { justify-self: start; text-align: left; }
+        &:nth-child(even) { justify-self: end; text-align: right; }
+      }
+    }
+  }
+}

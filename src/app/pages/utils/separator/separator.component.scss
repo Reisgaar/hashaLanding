@@ -1,0 +1,29 @@
+.banner {
+  position: relative;
+  z-index: 3;
+  margin: -10px 0;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 100px;
+    object-fit: cover;
+  }
+
+  .baseboard {
+    height: 30px;
+    min-height: unset;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner .baseboard {
+    object-fit: cover;
+    width: 100%;
+    height: unset;
+  }
+}

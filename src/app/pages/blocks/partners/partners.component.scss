@@ -1,0 +1,31 @@
+@import '/src/styleVariables.scss';
+
+.partners {
+  background: linear-gradient(to bottom, $yellow-border-gradient, $yellow-background-light 20px, $yellow-background-light calc(100% - 150px), $yellow calc(100% + 100px));
+
+  .blackboard {
+    margin: 100px auto 20px;
+
+    .image {
+      width: 100%;
+
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+// Small devices
+@media (max-width: 576px) {
+  .partners .blackboard .image {
+
+    &.desktop {
+      display: none;
+    }
+
+    &.mobile {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<!--
+<div>
+  <p *ngIf="walletIsConnected">Connected wallet: {{account | shortWallet}}</p>
+  <input *ngIf="!walletIsConnected" type="button" value="Connect your wallet"  (click)="connectWallet(false)" />
+  <input *ngIf="walletIsConnected" type="button" value="Disconnect"  (click)="disconnect()" />
+</div>
+-->
+
+<app-header></app-header>
+
+<a id="home"><app-main></app-main></a>
+
+<a id="world"><app-hashapon-world></app-hashapon-world></a>
+<app-bamboo></app-bamboo>
+<a id="pets"><app-pets></app-pets></a>
+<a id="random"><app-randomization></app-randomization></a>
+
+<app-separator [style]="'eggs'"></app-separator>
+
+<a id="stats"><app-stats></app-stats></a>
+<a id="grow"><app-grow-locations></app-grow-locations></a>
+
+<app-separator [style]="'machines'"></app-separator>
+
+<a id="seasons"><app-seasons></app-seasons></a>
+<a id="partners"><app-partners></app-partners></a>
+
+<app-separator [style]="'baseboard'"></app-separator>
+
+<a id="community"><app-join-us></app-join-us></a>
+
+<app-footer></app-footer>

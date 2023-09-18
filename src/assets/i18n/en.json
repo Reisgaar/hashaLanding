@@ -1,0 +1,133 @@
+{
+  "species": {
+    "birds": "Birds",
+    "canids": "Canids",
+    "felines": "Felines",
+    "primates": "primates",
+    "ursids": "Ursids"
+  },
+
+  "stats": {
+    "endurance": "Endurance",
+    "flexibility": "Flexibility",
+    "speed": "Speed",
+    "strength": "Strength"
+  },
+
+  "landing": {
+
+    "navigation": {
+      "community": "Community",
+      "home": "Home",
+      "marketplace": "Marketplace",
+      "partners": "Partners",
+      "pets": "Pets",
+      "playNow": "Play now",
+      "privacy": "Privacy policy",
+      "seasons": "Seasons",
+      "terms": "Terms of use",
+      "whitepaper": "Whitepaper"
+    },
+
+    "mainBlock": {
+      "claim": "Get, collect and play with the pets you've always wanted.",
+      "button1": "More info",
+      "button2": "Play now"
+    },
+
+    "worldBlock": {
+      "title": "Discover a new World",
+      "text": "Purchase your favourite pets and collect them all or participate in community activities to win BAMBOO.",
+      "explanation": "* BAMBOO is the game governance token belonging to the Bamboo DeFi ecosystem.",
+      "button": "Whitepaper"
+    },
+
+    "bambooBlock": {
+      "title": "What is Bamboo?",
+      "text1": "BAMBOO is the governance token (in-game currency) belonging to the Bamboo DeFi ecosystem.",
+      "text2": "You will use it to get your pets, play games and participate in tournaments, and you will also be rewarded in BAMBOO!",
+      "button": "Go to Bamboo"
+    },
+
+    "petsBlock": {
+      "title": "Pets",
+      "text1": "What stage of growth do you want your pet to be at?",
+      "text2": "Egg, baby, young or adult.",
+      "descriptions": {
+        "birds": "Fast, observant and very passionate about what they do, do you have your favourite yet?",
+        "canids": "Canids sniff out your love for them and use their strength to offer you the best protection in the world.",
+        "felines": "Felines are very independent, able to see in the dark and run long distances. Purrrrrr!",
+        "primates": "This animal species has an energetic attitude and a heart-stopping flexibility - get to know them (if they're not lazing around)!",
+        "ursids": "Quiet, independent and very loving, these animals will captivate you instantly. By the way, they need a lot of rest in winter!"
+      },
+      "button": "View more"
+    },
+
+    "randomizationBlock": {
+      "title": "Randomization",
+      "text": "In Hashapon, pets are totally free to be whatever they want to be. They will randomly decide the shape of their arms, legs, body or head.",
+      "textBold": "Investigate all possible options!",
+      "button": "Marketplace"
+    },
+
+    "statsBlock": {
+      "title": "Stats",
+      "text": "Train the stats of your pets to get the best results in tournaments. Play them and win prizes!",
+      "textBold": "More ways to increase your stats?",
+      "button": "View more",
+      "explanations": {
+        "endurance": "Develop your pet's endurance to withstand the toughest challenges.",
+        "flexibility": "A flexible pet is a pet that coordinates better - improve its agility with this stat!",
+        "speed": "Ready, steady, go! Train your speed to compete and be lighter than your teammates.",
+        "strength": "Did someone say strength? Exercise this skill and stand out by winning tournaments."
+      }
+    },
+
+    "locationsBlock": {
+      "title": "Where will your pets grow up?",
+      "incubators": {
+        "name": "Incubator",
+        "description": "The hatchery welcomes all the eggs you have decided to hatch. Which pet will it hide?"
+      },
+      "playground": {
+        "name": "Playground",
+        "description": "Play with his friends and get him ready for school. Your pet will get sand all over himself, but he'll learn to behave!"
+      },
+      "school": {
+        "name": "School",
+        "description": "Here your beloved animal will learn the best lessons in life - you'll have to take it to the exam to graduate!"
+      },
+      "gym": {
+        "name": "Gym",
+        "description": "The gym has a reduced registration fee for your pets to improve their strength, endurance, speed and flexibility."
+      },
+      "others": {
+        "name": "Other scenarios",
+        "description": "You still have to discover the wonderful Hashapon Paradise and other scenarios that we will open when they are discovered."
+      }
+    },
+
+    "seasonsBlock": {
+      "title": "Seasons",
+      "subtitle": "Actual season",
+      "description": "Get to know new collections of mascots or participate in different tournaments with each season.",
+      "descriptionBold": "New challenges await you!",
+      "tournaments": {
+        "title": "Tournaments",
+        "text1": "Use your pets' stats to participate in the fantastic tournaments each season.",
+        "text2": "Will he have trained hard enough and will he beat his teammates?",
+        "text3": "Reach the highest positions and collect the best prizes - get BAMBOO, tickets and other prizes!",
+        "button1": "Know more",
+        "button2": "Play now"
+      }
+    },
+
+    "partnersBlock": {
+      "title": "Partners"
+    },
+
+    "joinUsBlock": {
+      "title": "Join us!"
+    }
+  }
+}

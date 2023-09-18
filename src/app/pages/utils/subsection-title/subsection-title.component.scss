@@ -1,0 +1,101 @@
+@import '/src/styleVariables.scss';
+
+.title {
+  position: relative;
+  z-index: 0;
+  width: max-content;
+  margin: 0;
+  text-transform: uppercase;
+
+  h1 {
+    color: $purple;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  &-back {
+    position: absolute;
+    z-index: -1;
+    left: 0%;
+    top: 0%;
+    color: $yellow;
+    font-size: 5em;
+    font-weight: bold;
+    white-space: nowrap;
+
+    &.intense {
+      color: $yellow;
+    }
+
+    &.light {
+      color: $yellow-title-shadow;
+    }
+  }
+
+  &.center {
+    margin: auto;
+
+    .title-back {
+      left: 50%;
+      top: 0%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.right {
+    margin: 0 0 0 auto;
+
+    .title-back {
+      left: unset;
+      right: 0%;
+      top: 0%;
+    }
+  }
+}
+
+
+
+/*
+ * Responsive breakpoints
+ */
+
+// Medium devices
+@media (max-width: 768px) {
+  .title,
+  .title.center {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      font-size: 3em;
+      line-height: 1em;
+    }
+
+    .title-back {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      white-space: normal;
+      font-size: 4em;
+      line-height: 1em;
+      min-width: 150%;
+    }
+  }
+}
+
+// Small devices
+@media (max-width: 576px) {
+  .title,
+  .title.center {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      font-size: 1.7em;
+    }
+
+    .title-back {
+      font-size: 3em;
+    }
+  }
+}

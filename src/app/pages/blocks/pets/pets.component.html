@@ -1,0 +1,47 @@
+<div class="pets block">
+  <div class="limiter">
+    <app-section-title [title]="'landing.petsBlock.title' | translate" [shadowColor]="'yellow'"></app-section-title>
+    <p class="subtitle">
+      <span>{{'landing.petsBlock.text1' | translate}}</span>
+      <span>{{'landing.petsBlock.text2' | translate}}</span>
+    </p>
+    <div class="species">
+      <div class="cards">
+        <img class="desktop" src="assets/images/pets/card_{{selectedClass}}{{selectedStage}}.svg" />
+        <img class="mobile" src="assets/images/pets/card_{{selectedClass}}{{selectedStage}}_mobile.svg" />
+        <div class="stage-selector">
+          <img class="circle" src="assets/images/buttons/circle_{{selectedStage === 1 ? 'black' : 'purple'}}.svg" (click)="changeSelectedStage(1)" />
+          <img class="circle" src="assets/images/buttons/circle_{{selectedStage === 2 ? 'black' : 'purple'}}.svg" (click)="changeSelectedStage(2)" />
+        </div>
+      </div>
+      <div class="selector">
+        <div class="icons">
+          <div *ngFor="let animal of shownIconList" class="icon {{animal}}" [class.active]="selectedClass === animal">
+            <div class="icon-wrapper">
+              <div class="icon-name">
+                <p>{{animal}}</p>
+              </div>
+              <img class="abled" src="assets/images/pets/icon_square_{{animal}}.svg" (click)="changeSelectedClass(animal)" />
+              <img class="disabled" src="assets/images/pets/icon_square_{{animal}}_disabled.svg" (click)="changeSelectedClass(animal)" />
+            </div>
+          </div>
+          <img *ngIf="animalList.length > shownIconAmount" class="arrow prev" src="assets/images/buttons/slider_arrow.svg" (click)="moveSliderPrev()" />
+          <img *ngIf="animalList.length > shownIconAmount" class="arrow next" src="assets/images/buttons/slider_arrow.svg" (click)="moveSliderNext()" />
+        </div>
+        <div class="description">
+          <p *ngFor="let animal of shownIconList; let i = index" class="pos{{i}}" [class.active]="selectedClass === animal">
+            <span class="name">{{'species.' + animal | translate}}</span>
+            <span>{{'landing.petsBlock.descriptions.' + animal | translate}}</span>
+          </p>
+        </div>
+        <div class="buttons">
+          <!-- TODO: set correct link -->
+          <a class="button" href="https://bamboodefi.com/" target="_blank">
+            <img src="assets/images/buttons/button_purple.svg" class="image" />
+            <span class="text">Ver más</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

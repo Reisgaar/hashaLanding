@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="402" height="45" viewBox="0 0 402 45">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_261" data-name="Rectángulo 261" width="15.755" height="16.619" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_2566" data-name="Grupo 2566" transform="translate(-723 -2954)">
+    <path id="Rectángulo_536" data-name="Rectángulo 536" d="M16,0H386a16,16,0,0,1,16,16V45a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V16A16,16,0,0,1,16,0Z" transform="translate(723 2954)" fill="#bd97fb"/>
+    <path id="Rectángulo_538" data-name="Rectángulo 538" d="M15,0H381a15,15,0,0,1,15,15V42a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(726 2957)" fill="#8b66c7"/>
+    <path id="Rectángulo_537" data-name="Rectángulo 537" d="M15,0H375a15,15,0,0,1,15,15V39a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(729 2960)" fill="#6c33cc"/>
+    <g id="Grupo_2565" data-name="Grupo 2565" transform="translate(732.522 2964.646)" style="mix-blend-mode: soft-light;isolation: isolate">
+      <g id="Grupo_2199" data-name="Grupo 2199">
+        <g id="Grupo_2198" data-name="Grupo 2198" clip-path="url(#clip-path)">
+          <path id="Trazado_1256" data-name="Trazado 1256" d="M6.091,25.681c1.121-4.125,4.695-7.219,8.634-8.879,2.187-.921,5.676-1.481,6.8-3.874a2.648,2.648,0,0,0-1.489-3.645c-1.555-.6-3.359.14-4.792.747a15.309,15.309,0,0,0-6.428,5.413A15.6,15.6,0,0,0,6.5,20.33a14.366,14.366,0,0,0-.462,2.7,17.143,17.143,0,0,1,.054,2.652" transform="translate(-6.03 -9.062)" fill="#d9d9d9"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<div class="stats block">
+  <div class="limiter">
+    <div class="desktop-title">
+      <app-subsection-title [title]="'landing.statsBlock.title' | translate" [align]="'left'" [color]="'light'"></app-subsection-title>
+    </div>
+    <div class="mobile-title">
+      <app-subsection-title [title]="'landing.statsBlock.title' | translate" [align]="'center'" [color]="'light'"></app-subsection-title>
+    </div>
+    <div class="grid">
+      <div class="description">
+        <p class="text">{{'landing.statsBlock.text' | translate}}</p>
+        <p class="textBold">{{'landing.statsBlock.textBold' | translate}}</p>
+        <div class="buttons">
+          <!-- TODO: set correct link -->
+          <a class="button" href="https://bamboodefi.com/" target="_blank">
+            <img src="assets/images/buttons/button_yellow.svg" class="image" />
+            <span class="text">{{'landing.statsBlock.button' | translate}}</span>
+          </a>
+        </div>
+      </div>
+      <div class="definition">
+        <p *ngFor="let stat of statsList" [class.visible]="selectedStat === stat"></p>
+        <p *ngFor="let stat of statsList" [class.visible]="selectedStat === stat">
+          <span class="stat-name">{{'stats.' + stat | translate}}</span>
+          <span>{{'landing.statsBlock.explanations.' + stat | translate}}</span>
+        </p>
+      </div>
+      <div class="image">
+        <div class="machine">
+          <img *ngFor="let stat of statsList" src="assets/images/stats/{{stat}}_machine.png" [class.active]="selectedStat === stat">
+        </div>
+        <div class="stat-selector">
+          <div *ngFor="let stat of statsList" class="stat" [class.active]="selectedStat === stat">
+            <span class="name">{{'stats.'+ stat | translate}}</span>
+            <div class="icon" (click)="changeSelectedStat(stat)">
+              <img src="assets/images/stats/{{stat}}.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+
+// COLORS
+$white: #FFFFFF;
+$black: #000000;
+$black-shadow: #30303055;
+$grey-dark: #5A5A5A;
+$grey: #8C8C8C;
+
+$yellow: #FFF061;
+$yellow-background-light: #FAF9E2;
+$yellow-background-dark: #FAF3C8;
+$yellow-border-gradient: #DFDDB6;
+$yellow-title-shadow: #F6F3C6;
+
+$purple: #6C33CC;
+$purple-opacity-70: #6C33CCcc;
+$purple-title-shadow: #BCA7C650;
+$purple-texts: #332951;
+$purple-claim: #3D1188;
+
+// FONTS
+$poppins: 'Poppins', sans-serif;
+$arco: 'arco', 'arial', sans-serif;
+
+@font-face {
+  font-family: arco;
+  src: url(assets/fonts/arco.otf) format("opentype");
+}

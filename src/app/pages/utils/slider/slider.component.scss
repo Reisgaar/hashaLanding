@@ -1,0 +1,52 @@
+@import '/src/styleVariables.scss';
+
+.slider {
+  position: relative;
+
+  .slider-wrapper {
+    width: 80%;
+    overflow: hidden;
+    margin: 50px auto 0;
+    line-height: 0;
+
+    .tiles {
+      position: relative;
+      left: 0;
+      transition: left 0.5s ease-in-out;
+
+      .tile {
+        display: inline-block;
+
+        .image {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    cursor: pointer;
+    display: grid;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 5%;
+
+    img {
+      align-self: center;
+      justify-self: center;
+      width: 70%;
+    }
+
+    &.prev {
+      left: 0;
+    }
+
+    &.next {
+      right: 0;
+      rotate: 180deg;
+      transform: translateY(50%);
+    }
+  }
+}

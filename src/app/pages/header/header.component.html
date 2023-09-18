@@ -1,0 +1,87 @@
+<div class="header">
+  <div class="menu limiter">
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="assets/images/head_icon.svg" class="image" />
+    </div>
+    <!-- RESPONSIVE MENU SWITCHER -->
+    <div class="switcher">
+      <img src="assets/images/buttons/menu_icon.svg" class="icon" (click)="switchResponsiveMenu()" />
+    </div>
+    <!-- TABS -->
+    <div class="tabs">
+      <div
+        *ngFor="let tab of ['home', 'pets', 'seasons', 'partners', 'community']"
+        class="tab" [class.active]="actualBlock === tab"
+        (click)="changeActualBlock(tab)"
+      >
+        <p>{{'landing.navigation.' + tab | translate}}</p>
+      </div>
+    </div>
+    <!-- LANGUAGE SELECTOR -->
+    <div class="lang">
+      <img *ngIf="!langMenuIsVisible" src="assets/images/language_icon.svg" (click)="switchLangMenu()" />
+      <img *ngIf="langMenuIsVisible" src="assets/images/language_icon_active.svg" (click)="switchLangMenu()" />
+
+      <div *ngIf="langMenuIsVisible" class="lang-selector">
+        <p (click)="setLanguageTo('en')" [class.active]="currentLanguage === 'en'">English</p>
+        <p (click)="setLanguageTo('es')" [class.active]="currentLanguage === 'es'">Español</p>
+      </div>
+    </div>
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <!-- TODO: set correct links -->
+      <a class="button" href="https://dapp.outerringmmo.com/" target="_blank">
+        <img src="assets/images/buttons/button_yellow.svg" class="image" />
+        <span class="text">{{'landing.navigation.marketplace' | translate}}</span>
+      </a>
+      <a class="button" href="http://testnl.ovh/" target="_blank">
+        <img src="assets/images/buttons/button_yellow.svg" class="image" />
+        <span class="text">{{'landing.navigation.playNow' | translate}}</span>
+      </a>
+    </div>
+  </div>
+
+
+<!-- RESPONSIVE MENU -->
+  <div class="menu responsive-menu" *ngIf="responsiveMenuIsVisible">
+    <!-- TABS -->
+    <div class="tabs">
+      <div
+        *ngFor="let tab of ['home', 'pets', 'seasons', 'partners', 'community']"
+        class="tab" [class.active]="actualBlock === tab"
+        (click)="changeActualBlock(tab)"
+      >
+        <p>{{'landing.navigation.' + tab | translate}}</p>
+      </div>
+    </div>
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <!-- TODO: set correct links -->
+      <a class="button" href="https://dapp.outerringmmo.com/" target="_blank">
+        <img src="assets/images/buttons/button_yellow.svg" class="image" />
+        <span class="text">{{'landing.navigation.marketplace' | translate}}</span>
+      </a>
+      <a class="button" href="http://testnl.ovh/" target="_blank">
+        <img src="assets/images/buttons/button_yellow.svg" class="image" />
+        <span class="text">{{'landing.navigation.playNow' | translate}}</span>
+      </a>
+    </div>
+    <!-- SOCIAL MEDIA -->
+    <div class="rrss">
+      <a href="https://medium.com/@hashapon" target="_blank">
+        <img class="rrss-icon medium" src="assets/images/rrss/medium-yellow.svg">
+      </a>
+      <a href="https://twitter.com/Hashapon" target="_blank">
+        <img class="rrss-icon twitter" src="assets/images/rrss/twitter-yellow.svg">
+      </a>
+      <!-- TODO: add en/es telegram with translation -->
+      <a href="https://t.me/BambooDeFi" target="_blank">
+        <img class="rrss-icon telegram" src="assets/images/rrss/telegram-yellow.svg">
+      </a>
+      <a href="https://instagram.com/hashapon" target="_blank">
+        <img class="rrss-icon instagram" src="assets/images/rrss/instagram-yellow.svg">
+      </a>
+    </div>
+  </div>
+</div>

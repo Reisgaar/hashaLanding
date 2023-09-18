@@ -1,0 +1,110 @@
+@import '/src/styleVariables.scss';
+
+.main {
+  position: relative;
+  padding: 50px 0 0;
+  background-color: $yellow-background-dark;
+
+  .background {
+    line-height: 0;
+    width: 100%;
+    background-image: url('/assets/images/main_background_desktop.png');
+    background-size: contain;
+    padding: 0;
+
+    .desktop {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        min-width: 1000px;
+      }
+    }
+
+    .mobile {
+      display: none;
+    }
+  }
+
+  .title {
+    max-width: 500px;
+    width: max-content;
+    text-align: center;
+    margin: auto;
+
+    .logo {
+      width: 80%;
+    }
+
+    .claim {
+      width: 75%;
+      color: $purple-claim;
+      font-size: 1.4em;
+      font-weight: bold;
+      line-height: 1em;
+      margin: 10px auto 30px;
+    }
+
+    .buttons {
+      grid-row: 1;
+      grid-column: 3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      width: 80%;
+      margin: auto;
+
+      .button {
+        align-self: center;
+        justify-self: center;
+
+        .image {
+          height: 50px;
+        }
+
+        .text {
+          color: $white;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Responsive breakpoints
+ */
+
+// Small devices
+@media (max-width: 576px) {
+  .main {
+
+    .title {
+      width: 100%;
+
+      .logo {
+        width: 100%;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .background {
+      background-image: none;
+
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: block;
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import '/src/styleVariables.scss';
+
+.title {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  max-width: max-content;
+  margin: 0 auto;
+  font-family: $arco;
+
+  h1 {
+    font-family: $arco;
+    color: $purple;
+    text-align: center;
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  &-back {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 7em;
+    white-space: nowrap;
+
+    &.yellow {
+      color: $yellow-title-shadow;
+    }
+
+    &.purple {
+      color: $purple-title-shadow;
+    }
+  }
+
+  .underline {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -5%;
+    width: 110%;
+
+    .dot {
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border-radius: 100%;
+      background-color: $yellow;
+
+      &.dot1 { left: 20%; transform: translateX(-50%);}
+      &.dot2 { left: 80%; transform: translateX(-50%);}
+    }
+
+    .line {
+      position: absolute;
+      height: 5px;
+      width: 100%;
+      background-color: $purple;
+      border-radius: 50px;
+
+      &.line1 { width: 15%; left: 0; }
+      &.line2 { width: 50%; left: 50%; transform: translateX(-50%);}
+      &.line3 { width: 15%; right: 0;}
+    }
+  }
+}
+
+/*
+ * Responsive breakpoints
+ */
+
+// Extra large devices
+@media (max-width: 1200px) {
+  .title {
+
+    .underline {
+      left: -1%;
+      width: 102%;
+    }
+  }
+}
+
+// Medium devices
+@media (max-width: 768px) {
+  .title {
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .title-back {
+      font-size: 5em;
+    }
+
+    .underline {
+      top: calc(100% + 10px);
+    }
+  }
+}
+
+// Small devices
+@media (max-width: 576px) {
+  .title {
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .title-back {
+      font-size: 3em;
+    }
+
+    .underline {
+      top: calc(100% + 10px);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="slider">
+  <div class="slider-wrapper">
+    <div class="tiles" [ngStyle]="{'width': images.length * 100 + '%', 'left': sliderPosition + '%'}">
+      <div class="tile" *ngFor="let i of images" [ngStyle]="{'width': 100 / images.length  + '%'}">
+        <img src="{{i}}" class="image" />
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow prev">
+    <img src="assets/images/buttons/slider_arrow.svg" (click)="moveSlider(false)" />
+  </div>
+  <div class="arrow next">
+    <img src="assets/images/buttons/slider_arrow.svg" (click)="moveSlider(true)" />
+  </div>
+</div>

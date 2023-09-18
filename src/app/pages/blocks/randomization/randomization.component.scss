@@ -1,0 +1,317 @@
+@import '/src/styleVariables.scss';
+
+.randomization {
+  background: linear-gradient(to bottom, $yellow-background-light, $yellow);
+  padding-bottom: 0;
+
+  .limiter {
+    position: relative;
+    z-index: 0;
+
+    .eggs {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .egg {
+
+        &.feline { position: absolute; bottom: 0; left: 0; transform: translate(180%, -200%); }
+        &.canid  { position: absolute; bottom: 0; left: 0; transform: translate(0%, -30%); }
+        &.ursid  { position: absolute; bottom: 0; left: 0; transform: translate(30%, 50%); }
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content max-content 1fr;
+    gap: 20px;
+    padding: 30px 0 200px;
+
+    .description {
+      grid-column: 1;
+      grid-row: 1;
+      position: relative;
+      align-self: start;
+      font-size: 1.3em;
+
+      .mobile-title {
+        display: none;
+      }
+
+      .text {
+        max-width: 500px;
+        margin: 40px 0 0;
+      }
+
+      .bold {
+        font-weight: 600;
+        margin: 12px 0;
+      }
+    }
+
+    .species-buttons {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: start;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+      width: 100%;
+      margin: 0 auto;
+
+      .icon-grid {
+        align-self: center;
+        justify-self: start;
+        display: grid;
+        filter: drop-shadow(2px 2px 2px $black-shadow);
+
+        .icon {
+          cursor: pointer;
+          align-self: center;
+          justify-self: start;
+          grid-column: 1;
+          grid-row: 1;
+          width: 100%;
+          max-width: 50px;
+
+          &.disabled {
+            position: relative;
+            opacity: 0;
+            transform: rotate3d(1, 1, 0, 180deg);
+            transition: transform 0.3s ease-in-out, opacity 0s linear 0.15s;
+
+            &.selected {
+              opacity: 1;
+              transform: rotate3d(1, 1, 0, 0deg);
+              transition: transform 0.3s ease-in-out, opacity 0s linear 0.15s;
+            }
+          }
+
+          &.abled {
+            position: relative;
+            opacity: 0;
+            transform: rotate3d(1, 1, 0, 180deg);
+            transition: transform 0.3s ease-in-out, opacity 0s linear 0.15s;
+
+            &.selected {
+              opacity: 1;
+              transform: rotate3d(1, 1, 0, 0deg);
+              transition: transform 0.3s ease-in-out, opacity 0s linear 0.15s;
+            }
+          }
+        }
+      }
+    }
+
+    .buttons {
+      grid-column: 1;
+      grid-row: 3;
+      width: max-content;
+      margin: 0;
+
+      .button {
+        display: block;
+        width: max-content;
+        margin: 20px auto;
+
+        .text {
+          color: $white;
+          font-size: 1.2em;
+        }
+
+        .image {
+          height: 50px;
+        }
+      }
+    }
+
+    .image {
+      grid-column: 2;
+      grid-row: 1/4;
+      align-self: center;
+
+      .bar {
+        position: relative;
+        width: 50%;
+        max-width: 400px;
+        min-width: 200px;
+        margin: 0 50px 30px auto;
+        height: 50px;
+        border: 3px solid $purple;
+        border-radius: 500px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+
+        p {
+          pointer-events: none;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0;
+          font-weight: bold;
+          font-size: 1.3em;
+        }
+
+        &-fill {
+          pointer-events: none;
+          background: linear-gradient(to right, $purple, $white);
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .incubator {
+        position: relative;
+        width: 50%;
+        max-width: 400px;
+        min-width: 200px;
+        margin: auto 50px auto auto;
+
+        &-border {
+          width: 100%;
+        }
+
+        .arrow {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          padding: 25px 5px;
+
+          &.prev {
+            right: 100%;
+            transform: translateY(-50%);
+          }
+
+          &.next {
+            rotate: 180deg;
+            left: 100%;
+            transform: translateY(50%);
+          }
+        }
+
+        .slider-wrapper {
+          width: 100%;
+          overflow: hidden;
+
+          .slider {
+            width: 500%;
+            position: relative;
+            left: 0%;
+            transition: left 0.3s ease-in-out;
+
+            .tile {
+              width: 20%;
+              max-height: 300px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/*
+ * Responsive breakpoints
+ */
+
+// Large devices
+@media (max-width: 992px) {
+  .randomization .grid .image .bar {
+    height: 30px;
+  }
+}
+
+// Medium devices
+@media (max-width: 768px) {
+  .randomization {
+
+    .limiter {
+      .eggs {
+        display: none;
+      }
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      padding: 30px 0 100px;
+
+      .description {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+
+        .desktop-title {
+          display: none;
+        }
+
+        .mobile-title {
+          display: block;
+        }
+
+        .text {
+          max-width: unset;
+        }
+      }
+
+      .image {
+        grid-column: 1;
+        grid-row: 2;
+
+        .bar {
+          margin: 0 auto 30px;
+        }
+
+        .incubator {
+          margin: auto;
+        }
+      }
+
+      .species-buttons {
+        grid-column: 1;
+        grid-row: 3;
+        margin: 20px auto;
+
+        .icon-grid {
+          justify-self: center;
+        }
+      }
+
+      .buttons {
+        grid-column: 1;
+        grid-row: 4;
+        align-self: center;
+        margin: auto;
+      }
+    }
+  }
+}
+
+// Small devices
+@media (max-width: 576px) {
+  .randomization .grid {
+
+    .description {
+      font-size: 1.2em;
+    }
+
+    .buttons .button {
+
+      .text {
+        font-size: 1.1em;
+      }
+
+      .image {
+        height: 40px;
+      }
+    }
+  }
+}

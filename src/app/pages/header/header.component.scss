@@ -1,0 +1,328 @@
+@import '/src/styleVariables.scss';
+
+.header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: $purple;
+  color: $white;
+  filter: drop-shadow(0px 2px 2px $black-shadow);
+
+  .menu {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70px 1fr max-content max-content;
+
+    .logo {
+      grid-row: 1;
+      grid-column: 1;
+      align-self: center;
+      justify-self: start;
+      width: max-content;
+      line-height: 0;
+
+      .image {
+        width: 32px;
+      }
+    }
+
+    .switcher,
+    .rrss {
+      display: none;
+    }
+
+    .tabs {
+      grid-row: 1;
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: repeat(5, max-content);
+      gap: 50px;
+
+      .tab {
+        cursor: pointer;
+        position: relative;
+        align-self: center;
+        justify-self: center;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &.active {
+          cursor: default;
+          color: $yellow;
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            border-radius: 8px 8px 0 0;
+            background-color: $yellow;
+          }
+        }
+
+        p {
+          margin: 0;
+          text-transform: uppercase;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .lang {
+      position: relative;
+      grid-row: 1;
+      grid-column: 3;
+      align-self: center;
+      justify-self: center;
+      line-height: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+
+      img {
+        cursor: pointer;
+        align-self: center;
+        width: 35px;
+      }
+
+      &-selector {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: max-content;
+        padding: 5px 25px;
+        background: $purple;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 3px 6px $black-shadow;
+
+        p {
+          cursor: pointer;
+          line-height: 1em;
+          margin: 15px 0;
+          text-transform: uppercase;
+          font-weight: 600;
+
+          &.active {
+            cursor: default;
+            position: relative;
+            color: $yellow;
+            margin-bottom: 20px;
+
+            &::before {
+              content: '';
+              height: 5px;
+              width: 100%;
+              position: absolute;
+              top: 100%;
+              top: calc(100% + 3px);
+              left: 0;
+              background-color: $yellow;
+              border-radius: 20px 20px 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    .buttons {
+      grid-row: 1;
+      grid-column: 4;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 15px;
+      margin-left: 20px;
+
+      .button {
+        align-self: center;
+        justify-self: center;
+
+        .text {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Responsive breakpoints
+ */
+
+// Extra large devices
+@media (max-width: 1200px) {
+  .header .menu {
+
+    .tabs {
+      gap: 40px;
+    }
+
+    .buttons {
+
+      .button {
+
+        .image {
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+
+// Large devices
+@media (max-width: 992px) {
+  .header .menu {
+    grid-template-columns: 50px 1fr max-content;
+
+    .tabs {
+      gap: 20px;
+      margin-left: 0;
+
+      .tab p {
+        font-size: 0.9em;
+      }
+    }
+
+    .lang {
+
+      img {
+        width: 30px;
+      }
+    }
+
+    .buttons {
+      gap: 5px;
+      margin-left: 10px;
+
+      .button {
+
+        .text {
+          font-size: 0.9em;
+        }
+
+        .image {
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    filter: unset;
+
+    .menu {
+      display: grid;
+      grid-template-columns: max-content 1fr max-content max-content;
+      grid-template-rows: 60px 1fr;
+      filter: drop-shadow(0px 2px 2px $black-shadow);
+      background: $purple;
+
+      .logo {
+        grid-row: 1;
+        grid-column: 1;
+        align-self: center;
+        justify-self: start;
+
+        .image {
+          height: 32px;
+        }
+      }
+
+      .lang {
+        grid-row: 1;
+        grid-column: 3;
+        align-self: center;
+        justify-self: center;
+      }
+
+      .switcher {
+        cursor: pointer;
+        display: block;
+        grid-row: 1;
+        grid-column: 4;
+        align-self: center;
+        justify-self: end;
+        line-height: 0;
+        margin-left: 20px;
+
+        .icon {
+          height: 32px;
+        }
+      }
+
+      .tabs, .buttons {
+        display: none;
+      }
+    }
+
+    .responsive-menu {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: auto;
+      display: block;
+      padding-bottom: 10px;
+      box-shadow: unset;
+      border-radius: 0 0 20px 20px;
+      background: $purple;
+      color: $white;
+      filter: drop-shadow(0px 2px 2px $black-shadow);
+
+      .tabs {
+        display: block;
+        grid-row: 12;
+        grid-column: 1/3;
+        padding: 0 15px;
+
+        .tab {
+          height: auto;
+          margin: 30px auto;
+          width: max-content;
+
+          &::before {
+            top: calc(100% + 5px);
+          }
+        }
+      }
+
+      .buttons {
+        grid-row: 4;
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: unset;
+        width: calc(100% - 30px);
+        margin: 20px 0;
+        padding: 0 15px;
+      }
+
+      .rrss {
+        grid-row: 5;
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr max-content;
+        width: calc(100% - 30px);
+        margin: 30px 0px 15px;
+        padding: 0 15px;
+
+        a {
+          align-self: center;
+          justify-self: start;
+
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}

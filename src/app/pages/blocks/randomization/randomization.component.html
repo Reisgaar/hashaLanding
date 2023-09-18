@@ -1,0 +1,55 @@
+<div class="randomization block">
+  <div class="limiter">
+    <div class="grid">
+      <div class="description">
+        <div class="desktop-title">
+          <app-subsection-title [title]="'landing.randomizationBlock.title' | translate" [align]="'left'" [color]="'intense'"></app-subsection-title>
+        </div>
+        <div class="mobile-title">
+          <app-subsection-title [title]="'landing.randomizationBlock.title' | translate" [align]="'center'" [color]="'intense'"></app-subsection-title>
+        </div>
+        <p class="text">{{'landing.randomizationBlock.text' | translate}}</p>
+        <p class="bold">{{'landing.randomizationBlock.textBold' | translate}}</p>
+      </div>
+      <div class="species-buttons">
+        <div class="icon-grid" *ngFor="let animal of animalList">
+          <img class="icon abled" src="assets/images/pets/icon_circle_{{animal}}.svg" (click)="changeSelectedAnimal(animal)" [class.selected]="selectedAnimal === animal" />
+          <img class="icon disabled" src="assets/images/pets/icon_circle_{{animal}}_disabled.svg" (click)="changeSelectedAnimal(animal)" [class.selected]="selectedAnimal !== animal" />
+        </div>
+      </div>
+      <div class="buttons">
+        <!-- TODO: set correct link -->
+        <a class="button" href="https://bamboodefi.com/" target="_blank">
+          <img src="assets/images/buttons/button_purple.svg" class="image" />
+          <span class="text">{{'landing.randomizationBlock.button' | translate}}</span>
+        </a>
+      </div>
+      <div class="image">
+        <div class="bar" (mousemove)="setBarWithMouse($event)">
+          <div class="bar-fill" [style.clip-path]="barPathStyle"></div>
+          <p>{{barPercentage}}%</p>
+        </div>
+        <div class="incubator">
+          <img src="assets/images/incubator/incubator_top.svg" class="incubator-border" />
+            <div class="slider-wrapper">
+              <div class="slider" [ngStyle]="{'left': sliderPosition + '%'}">
+                <img src="assets/images/pedigree/pedigree_{{selectedAnimal}}_5.svg" class="tile" />
+                <img src="assets/images/pedigree/pedigree_{{selectedAnimal}}_25.svg" class="tile" />
+                <img src="assets/images/pedigree/pedigree_{{selectedAnimal}}_50.svg" class="tile" />
+                <img src="assets/images/pedigree/pedigree_{{selectedAnimal}}_75.svg" class="tile" />
+                <img src="assets/images/pedigree/pedigree_{{selectedAnimal}}_100.svg" class="tile" />
+              </div>
+            </div>
+          <img src="assets/images/incubator/incubator_bottom.svg" class="incubator-border" />
+          <img src="assets/images/buttons/slider_arrow.svg" class="arrow prev" (click)="moveSlider(false)" />
+          <img src="assets/images/buttons/slider_arrow.svg" class="arrow next" (click)="moveSlider(true)" />
+        </div>
+      </div>
+    </div>
+    <div class="eggs">
+      <img src="assets/images/eggs/egg_feline.svg" class="egg feline" />
+      <img src="assets/images/eggs/egg_canid.svg" class="egg canid" />
+      <img src="assets/images/eggs/egg_ursid.svg" class="egg ursid" />
+    </div>
+  </div>
+</div>

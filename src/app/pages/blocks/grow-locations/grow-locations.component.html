@@ -1,0 +1,40 @@
+<div class="locations block">
+  <div class="limiter">
+    <app-subsection-title [title]="'Where will your pets grow?'" [align]="'center'" [color]="'light'"></app-subsection-title>
+    <div class="buttons">
+      <!-- TODO: set correct link -->
+      <a class="button" href="https://bamboodefi.com/" target="_blank">
+        <img src="assets/images/buttons/button_purple.svg" class="image" />
+        <span class="text">{{'landing.seasonsBlock.tournaments.button2' | translate}}</span>
+      </a>
+    </div>
+    <div class="slider">
+      <div class="slider-wrapper">
+        <div class="tiles" [ngStyle]="{'width': images.length * 100 + '%', 'left': sliderPosition + '%'}">
+          <div class="tile" *ngFor="let i of images" [ngStyle]="{'width': 100 / images.length  + '%'}">
+            <img src="assets/images/locations/{{i}}.svg" class="image" />
+            <div class="description">
+              <div class="name">
+                <p>{{'landing.locationsBlock.' + i + '.name' | translate}}</p>
+                <div class="arrow prev">
+                  <img src="assets/images/buttons/slider_arrow.svg" (click)="moveSlider(false)" />
+                </div>
+                <div class="arrow next">
+                  <img src="assets/images/buttons/slider_arrow.svg" (click)="moveSlider(true)" />
+                </div>
+              </div>
+              <p class="text">{{'landing.locationsBlock.' + i + '.description' | translate}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrow prev">
+        <img src="assets/images/buttons/slider_arrow.svg" (click)="moveSlider(false)" />
+      </div>
+      <div class="arrow next">
+        <img src="assets/images/buttons/slider_arrow.svg" (click)="moveSlider(true)" />
+      </div>
+    </div>
+  </div>
+</div>
